@@ -1,0 +1,66 @@
+.header{
+  background-color:#00822a;
+  width:100%;
+}
+
+.navigation {
+  width: 300px;
+}
+
+nav {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 20px 20px;
+}
+
+.mainmenu, .submenu, .submenu2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainmenu a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.mainmenu li {
+  padding: 10px;
+  background-color: #00822a;
+  border: none;
+}
+
+
+.mainmenu h3 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 400px;
+}
+
+.submenu li {
+  background-color: #00822a;
+}
+
+.submenu li:hover {
+  background-color: #333;
+  -webkit-transition: all 0.5s ease-out;
+}
+.submenu li li {
+background-color: #333;
+   -webkit-transition: all 0.5s ease-out;
+}
+
+
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+
