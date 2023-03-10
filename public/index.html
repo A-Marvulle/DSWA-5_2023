@@ -5,14 +5,25 @@
 	<meta charset="utf-8">
 	<title>IFSP - Pirituba</title>
 	<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
 </head>
 <body class='container'>
+  <header>
+    <nav class="navbar-nav">
+      <ul class="row nav">
+        <li class="col-1 nav-tabs"><a class="nav-link" href="#/cursos">Cursos</a></li>
+        <li class="col-2 nav-tabs"><a class="nav-link" href="#/contatos">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
 	<div ng-view></div>
 	<script src="vendor/angular/angular.js"></script>
 	<script src="vendor/angular-route/angular-route.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/controllers/ContatosController.js"></script>
 	<script src="js/controllers/ContatoController.js"></script>
+  <script src="js/controllers/CursosController.js"></script>
+	<script src="js/controllers/CursoController.js"></script>
 </body>
 </html>
