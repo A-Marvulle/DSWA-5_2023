@@ -1,9 +1,25 @@
 <div class="jumbotron">
+  <img style="float:left;" src="imgs/Logo.jpg">
 	<h1 class="text-center">Bem-vindo ao IFSP</h1>
   <h2 class="text-center">Cursos</h2>
 </div>
+<nav class="navbar navbar-expand navbar-dark bg-dark ng-scope">      
+  <div class="collapse navbar-collapse">
+    <div class="navbar-nav mr-auto">
+      <a class="nav-link" href="#/contatos">
+        <button class="btn btn-outline-light nav-item">Contatos</button>
+      </a>
+      <a class="nav-link" href="#/cursos">
+        <button class="btn btn-outline-light nav-item active">Cursos</button>
+      </a>
+    </div>
+    <form class="form-inline my-2 my-md-0 ng-pristine ng-valid">
+      <input ng-model="filtro" type="search" placeholder="Digite parte do nome" class="form-control ng-pristine ng-untouched ng-valid">
+    </form>
+  </div>
+</nav>
+<br>
 <button class="btn btn-primary" ng-click='incrementa()'>Novo</button>
-<input ng-model="filtro" type="search" placeholder="Digite parte do curso">
 <p>Cursos cadastrados: {{total}}</p>
 <div class="table-responsive">
 <table class="table table-hover">

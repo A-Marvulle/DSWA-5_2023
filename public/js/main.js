@@ -14,7 +14,7 @@ angular.module('ifsp', ['ngRoute']).config(function($routeProvider) {
 		controller: 'CursosController'
 	});
 
-	$routeProvider.when('/cursoo/:cursoId', {
+	$routeProvider.when('/curso/:cursoId', {
     	templateUrl: 'partials/curso.html', 
     	controller: 'CursoController'
     });
