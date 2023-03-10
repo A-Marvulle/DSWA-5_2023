@@ -10,11 +10,13 @@
 </head>
 <body class='container'>
   <header>
-    <nav class="navbar-nav">
-      <ul class="row nav">
-        <li class="col-1 nav-tabs"><a class="nav-link" href="#/cursos">Cursos</a></li>
-        <li class="col-2 nav-tabs"><a class="nav-link" href="#/contatos">Contatos</a></li>
-      </ul>
+    <nav class="row">
+      <a class="col-1 nav-link" href="#/contatos">
+        <button class="btn btn-outline-dark">Contatos</button>
+      </a>
+      <a class="col-2 nav-link" href="#/cursos">
+        <button class="btn btn-outline-dark">Cursos</button>
+      </a>
     </nav>
   </header>
 	<div ng-view></div>
