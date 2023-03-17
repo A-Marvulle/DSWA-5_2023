@@ -1,4 +1,4 @@
-angular.module('ifsp', ['ngRoute']).config(function($routeProvider) {
+angular.module('ifsp', ['ngRoute', 'ngResource']).config(function($routeProvider) {
   $routeProvider.when('/erro', {
 		templateUrl: 'partials/erro.html',
 	});
