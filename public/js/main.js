@@ -1,36 +1,45 @@
 angular.module('ifsp', ['ngRoute', 'ngResource']).config(function($routeProvider) {
   $routeProvider.when('/erro', {
-		templateUrl: 'partials/erro.html',
-	});
+    templateUrl: 'partials/erro.html',
+  });
 
   $routeProvider.when('/home', {
-		templateUrl: 'partials/home.html',
-	});
+    templateUrl: 'partials/home.html',
+  });
 
   $routeProvider.when('/', {
-		templateUrl: 'partials/home.html',
-	});
+    templateUrl: 'partials/home.html',
+  });
 
-		$routeProvider.when('/contatos', {
-		templateUrl: 'partials/contatos.html',
-		controller: 'ContatosController'
-	});
+  $routeProvider.when('/contatos', {
+    templateUrl: 'partials/contatos.html',
+    controller: 'ContatosController'
+  });
 
-	$routeProvider.when('/contato/:contatoId', {
-    	templateUrl: 'partials/contato.html', 
-    	controller: 'ContatoController'
-    });
+  $routeProvider.when('/contato/:contatoId', {
+    templateUrl: 'partials/contato.html',
+    controller: 'ContatoController'
+  });
 
   $routeProvider.when('/cursos', {
-		templateUrl: 'partials/cursos.html',
-		controller: 'CursosController'
-	});
+    templateUrl: 'partials/cursos.html',
+    controller: 'CursosController'
+  });
 
-	$routeProvider.when('/curso/:cursoId', {
-    	templateUrl: 'partials/curso.html', 
-    	controller: 'CursoController'
-    });
+  $routeProvider.when('/curso/:cursoId', {
+    templateUrl: 'partials/curso.html',
+    controller: 'CursoController'
+  });
+  $routeProvider.when('/contato', {
+    templateUrl: 'partials/contato.html',
+    controller: 'ContatoController'
+  });
+  $routeProvider.when('/curso', {
+    templateUrl: 'partials/curso.html',
+    controller: 'CursoController'
+  });
 
-     $routeProvider.otherwise({redirectTo: '/erro'});
+
+  $routeProvider.otherwise({ redirectTo: '/erro' });
 
 });

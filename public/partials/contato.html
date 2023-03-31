@@ -1,10 +1,11 @@
 <h1 class="text-center">Contato</h1>
-<p ng-show="mensagem.texto">
-    {{mensagem.texto}}
-</p>
-<form ng-submit="salva()" <div class="form-group">
-    <label for="nome">Nome completo</label>
-    <input type="text" class="form-control" id="nome" name="nome" required ng-model="contato.nome">
+<div class="alert alert-success" ng-show="mensagem.texto">
+  <p>{{mensagem.texto}}</p>
+</div>
+<form ng-submit="salva()">
+    <div class="form-group">
+        <label for="nome">Nome completo</label>
+        <input type="text" class="form-control" id="nome" name="nome" required ng-model="contato.nome">
     </div>
 
     <div class="form-group">
