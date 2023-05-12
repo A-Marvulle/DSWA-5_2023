@@ -11,3 +11,6 @@ sudo npm install bower@1.3 -g
 echo "Bower instalado"
 sudo npm audit fix
 echo "Pacotes corrigidos"
+npm install mongodb@3.6
+npm install mongoose --save
+
