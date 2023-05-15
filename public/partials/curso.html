@@ -1,25 +1,55 @@
-<h1 class="text-center">Curso</h1>
-
-<div class="alert alert-success" ng-show="mensagem.texto">
-  <p>{{mensagem.texto}}</p>
+<div class="jumbotron">
+  <img style="float:left;" src="imgs/Logo.jpg">
+	<h1 class="text-center">Bem-vindo aos Cursos</h1>
+  <h2 class="text-center">Alteração ou Cadastro</h2>
 </div>
-
-<form ng-submit="salva()" <div class="form-group">
-    <label for="nome">Curso</label>
-    <input type="text" class="form-control" id="curso" name="curso" required ng-model="curso.curso">
+<p ng-show="mensagem.texto">
+    {{mensagem.texto}}
+</p>
+<nav class="navbar navbar-expand navbar-dark bg-dark ng-scope">      
+  <div class="collapse navbar-collapse">
+    <div class="navbar-nav mr-auto">
+      <a class="nav-link" href="#/home">
+        <button class="btn btn-outline-light nav-item">Home</button>
+      </a>
+      <a class="nav-link" href="#/contatos">
+        <button class="btn btn-outline-light nav-item">Contatos</button>
+      </a>
+      <a class="nav-link" href="#/cursos">
+        <button class="btn btn-outline-light nav-item active">Cursos</button>
+      </a>
     </div>
+  </div>
+</nav>
 
-    <div class="form-group">
-        <label for="coordenador">Coordenador</label>
-        <div class="input-group">
-            <span class="input-group-addon">@</span>
-            <input type="coordenador" class="form-control" id="coordenador" placeholder="email@exemplo.com" name="coordenador" ng-model="curso.coordenador" required>
+<div>
+  <h1 class="text-center">Cadastro/Alteração de Curso</h1>
+  <div class="alert alert-success" ng-show="mensagem.texto">
+    <p>{{mensagem.texto}}</p>
+  </div>
+  
+  <form ng-submit="salva()" class="form"> 
+    <fieldset class="form-row-lg">
+      <div class="form-group">
+        <label for="nome" class="mr-1">Curso</label>
+        <input type="text" class="form-control border-dark rounded-lg" id="curso" name="curso" required ng-model="curso.curso">
+      </div>
+    </fieldset>
+    <fieldset class="form-row-lg">
+      <div class="form-group">
+        <label for="coordenador" class="ml-2 mr-1">Coordenador</label>
+          <input type="coordenador" class="form-control border-dark rounded-lg" id="coordenador" placeholder="email@exemplo.com" name="coordenador" ng-model="curso.coordenador" required>
+      </div>
+    </fieldset>
+    <fieldset class="form-row">     
+      <div class="form-group">
+        <button type="submit" style ="background:#007f28;"class="btn text-white ml-2">
+    			Salvar
+    		</button>
+      </div>
+        <div class="form-group">
+        <a href="#/cursos" class="btn btn-secundary bg-danger text-white ml-2">Voltar</a>
         </div>
-    </div>
-    <div>
-        <button type="submit" class="btn btn-primary">
-			Salvar
-		</button>
-        <a href="#/cursos" class="btn btn-default">Voltar</a>
-    </div>
-</form>
+    </fieldset>
+  </form>
+</div>
