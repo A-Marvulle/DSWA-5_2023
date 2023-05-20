@@ -1,13 +1,9 @@
-angular.module('ifsp', ['ngRoute', 'ngResource']).config(function($routeProvider) {
-  $routeProvider.when('/erro', {
-    templateUrl: 'partials/erro.html',
-  });
+angular.module('ifsp', ['ngRoute', 'ngResource']).config(function($routeProvider, $httpProvider) {
+
+  $httpProvider.interceptors.push('meuInterceptor');
+
 
   $routeProvider.when('/home', {
-    templateUrl: 'partials/home.html',
-  });
-
-  $routeProvider.when('/', {
     templateUrl: 'partials/home.html',
   });
 
@@ -39,7 +35,10 @@ angular.module('ifsp', ['ngRoute', 'ngResource']).config(function($routeProvider
     controller: 'CursoController'
   });
 
+  $routeProvider.when('/auth', {
+    templateUrl: 'partials/auth.html'
+  });
 
-  $routeProvider.otherwise({ redirectTo: '/erro' });
+  $routeProvider.otherwise({ redirectTo: '/home' });
 
 });
