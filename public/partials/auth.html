@@ -5,6 +5,7 @@
     <title>Autenticação do Usuário</title>
     <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/favicon.ico" />
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,15 +17,38 @@
         <h1 class="text-center">Bem-vindo ao IFSP</h1>
         <h2 class="text-center">Autenticação do Usuário</h2>
     </div>
-    <div class="container text-center">
-      
-        <a href="/auth/github">
-            <h1>
-              Entre pelo GitHub
-            </h1>
-        </a>
-      <i class="fa fa-github" style="font-size:50px"></i>
-    </div>
+  
+  <div class="container border border-secondary rounded w-50">
+    <h1 class="text-center">
+      <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/ifsp.png">
+      <br>ENTRAR</h1>
+    <form class="form">
+      <fieldset class="form-row-lg ">
+        <div class="form-group">
+          <label><br>Usuário: </label>
+          <input type="text" name="user" class="form-control"><br>
+        </div>
+        <div class="form-group">
+          <label><br>Senha: </label>
+          <input type="password" name="senha" class="form-control"><br><br>
+        </div>
+        <div class="form-group text-center">
+          <input type="button" value="Entrar" class="btn btn-success ml-2">
+          <a href="" class="btn btn-secundary bg-danger text-white ml-2">Esqueci a Senha</a>
+        </div>
+    
+        <div class="container text-center">
+          <a href="/auth/github">
+              <h2>
+                <i class="fa fa-github" style="font-size:55px;color:black"></i>
+                Entre pelo GitHub
+              </h2>
+          </a>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div><br></div>
 </body>
 
 </html>
