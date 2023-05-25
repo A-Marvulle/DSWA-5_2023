@@ -13,15 +13,36 @@
 
 <body>
     <div class="jumbotron">
-        <img style="float:left;" src="imgs/Logo.jpg" alt=" " />
-        <h1 class="text-center">Bem-vindo ao IFSP</h1>
-        <h2 class="text-center">Autenticação do Usuário</h2>
+  <img style="float:left;" src="imgs/Logo.jpg">
+	<h1 class="text-center">Bem-vindo ao IFSP</h1>
+  <h2 class="text-center">Contatos</h2>
+</div>
+<p ng-show="mensagem.texto">{{mensagem.texto}}</p>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark ng-scope">      
+  <div class="collapse navbar-collapse">
+    <div class="navbar-nav mr-auto">
+      <a class="nav-link" href="#/home">
+        <button class="btn btn-outline-light nav-item">Home</button>
+      </a>
+      <a class="nav-link" href="#/contatos">
+        <button class="btn btn-outline-light nav-item active">Contatos</button>
+      </a>
+      <a class="nav-link" href="#/cursos">
+        <button class="btn btn-outline-light nav-item">Cursos</button>
+      </a>
     </div>
+    <form class="form-inline my-2 my-md-0 ng-pristine ng-valid">
+      <input ng-model="filtro" type="search" placeholder="Digite parte do nome" class="form-control ng-pristine ng-untouched ng-valid">
+    </form>
+  </div>
+</nav>
+  <br>
   
-  <div class="container border border-secondary rounded w-50">
-    <h1 class="text-center">
-      <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/ifsp.png">
-      <br>ENTRAR</h1>
+  <div class="container border border-secondary rounded w-50 h-30">
+    <h1 class="text-center bg-white h-10">
+      <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/ifsp.png" style="width: 90px;height: 90px;">
+      <br><span>ENTRAR</span></h1>
     <form class="form">
       <fieldset class="form-row-lg ">
         <div class="form-group">
@@ -37,12 +58,18 @@
           <a href="" class="btn btn-secundary bg-danger text-white ml-2">Esqueci a Senha</a>
         </div>
     
-        <div class="container text-center">
-          <a href="/auth/github">
-              <h2>
-                <i class="fa fa-github" style="font-size:55px;color:black"></i>
-                Entre pelo GitHub
-              </h2>
+        <div class="text-center">
+          <a class="container" href="/auth/github">
+            <i class="fa fa-github" style="font-size:55px;"></i>
+          </a>
+          <a class="container" href="/">
+            <i class="fa fa-facebook" style="font-size:55px;color:black"></i>
+          </a>
+          <a class="container" href="/">
+            <i class="fa fa-instagram" style="font-size:55px;color:black"></i>
+          </a>
+          <a class="container" href="/">
+            <i class="fa fa-google" style="font-size:55px;color:black"></i>
           </a>
         </div>
       </fieldset>
